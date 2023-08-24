@@ -19,6 +19,8 @@ const Form = ({ onAddBook }) => {
         category,
       };
 
+      console.log('New Book', newBook);
+
       // Call the parent component's onAddBook function to add the new book
       onAddBook(newBook);
 

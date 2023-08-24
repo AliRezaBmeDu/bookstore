@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const Booklist = ({ books }) => {
   const [bookList, setBookList] = useState(books);
+
+  useEffect(() => {
+    setBookList(books);
+  }, [books]);
 
   const handleDeleteBook = (bookId) => {
     // Filter out the book with the given ID

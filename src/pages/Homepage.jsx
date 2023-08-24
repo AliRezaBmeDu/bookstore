@@ -7,12 +7,13 @@ const Homepage = () => {
   const [books, setBooks] = useState(primaryBooks);
 
   const handleAddBook = (newBook) => {
-    setBooks([...books, newBook]);
+    // Use the functional form of setBooks
+    setBooks((prevBooks) => [...prevBooks, newBook]);
+    console.log('Books:', books);
   };
 
   return (
     <div>
-      <h1>Booklist</h1>
       <Booklist books={books} />
       <Form onAddBook={handleAddBook} />
     </div>
