@@ -22,17 +22,12 @@ const Booklist = ({ books }) => {
           <li key={book.id}>
             <span>
               <strong>Title:</strong>
-              {' '}
               {book.title}
               ,
-              {' '}
               <strong>Author:</strong>
-              {' '}
               {book.author}
               ,
-              {' '}
               <strong>Category:</strong>
-              {' '}
               {book.category}
             </span>
             <button type="button" onClick={() => handleDeleteBook(book.id)}>Delete</button>
