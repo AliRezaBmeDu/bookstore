@@ -1,22 +1,30 @@
-const primaryBooks = [
-  {
-    title: 'The Lord of the Rings',
-    author: 'J R R Tolkien',
-    category: 'Fantasy',
-    id: 1,
-  },
-  {
-    title: 'Deception Point',
-    author: 'Dan Brown',
-    category: 'Thriller',
-    id: 2,
-  },
-  {
-    title: 'Hamlet',
-    author: 'Shakespeare',
-    category: 'Classic',
-    id: 3,
-  },
-];
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default primaryBooks;
+const Book = ({ book, deleteBook }) => (
+  <>
+    <span>
+      <strong>Title:</strong>
+      {book.title}
+      ,
+      <strong>Author:</strong>
+      {book.author}
+      ,
+      <strong>Category:</strong>
+      {book.category}
+    </span>
+    <button type="button" onClick={() => deleteBook(book.id)}>Delete</button>
+  </>
+);
+
+Book.propTypes = {
+  book: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+  }).isRequired,
+  deleteBook: PropTypes.func.isRequired,
+};
+
+export default Book;
