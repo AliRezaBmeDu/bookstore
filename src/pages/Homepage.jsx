@@ -9,7 +9,6 @@ const Homepage = () => {
   const handleAddBook = (newBook) => {
     // Use the functional form of setBooks
     setBooks((prevBooks) => [...prevBooks, newBook]);
-    console.log('Books:', books);
   };
 
   return (
