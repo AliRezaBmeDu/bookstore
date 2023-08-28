@@ -9,7 +9,10 @@ const booksSlice = createSlice({
     name: 'books',
     initialState,
     reducers: {
-        
+        addBook: (state, action) => {
+            const newBook = action.payload;
+            state.books = state.books.append(newBook);
+        },
     },
 });
 
