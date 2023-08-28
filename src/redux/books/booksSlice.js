@@ -13,6 +13,10 @@ const booksSlice = createSlice({
             const newBook = action.payload;
             state.books = state.books.append(newBook);
         },
+        deleteBook: (state, action) => {
+            const bookId = action.payload;
+            state.books = state.books.filter((item) => item.id !== bookId)
+        },
     },
 });
 
