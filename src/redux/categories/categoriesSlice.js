@@ -1,23 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    books: [],
+    categories: [],
     isLoading: true
 }
 
-const booksSlice = createSlice({
+const categories = createSlice({
     name: 'books',
     initialState,
     reducers: {
-        addBook: (state, action) => {
-            const newBook = action.payload;
-            state.books = state.books.append(newBook);
-        },
-        deleteBook: (state, action) => {
-            const bookId = action.payload.id;
-            state.books = state.books.filter((item) => item.id !== bookId)
-        },
+        checkStatus: () => {
+            return "Under construction"
+        }
     },
 });
 
-export default booksSlice.reducer
+export default categories.reducer
