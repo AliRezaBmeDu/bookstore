@@ -13,10 +13,7 @@ const booksSlice = createSlice({
     addBook: (state, action) => {
       const newBook = action.payload;
       console.log(newBook);
-      console.log('current state', state.books);
       state.books = [...state.books, newBook];
-      console.log('state after add', state.books);
-      // state.books = state.books.append(newBook);
     },
     deleteBook: (state, action) => {
       const bookId = action.payload.item_id;
