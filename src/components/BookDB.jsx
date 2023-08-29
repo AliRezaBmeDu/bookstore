@@ -1,21 +1,21 @@
 const primaryBooks = [
   {
-    title: 'The Lord of the Rings',
-    author: 'J R R Tolkien',
-    category: 'Fantasy',
-    id: 1,
+    item_id: 'item1',
+    title: 'The Great Gatsby',
+    author: 'John Smith',
+    category: 'Fiction',
   },
   {
-    title: 'Deception Point',
-    author: 'Dan Brown',
-    category: 'Thriller',
-    id: 2,
+    item_id: 'item2',
+    title: 'Anna Karenina',
+    author: 'Leo Tolstoy',
+    category: 'Fiction',
   },
   {
-    title: 'Hamlet',
-    author: 'Shakespeare',
-    category: 'Classic',
-    id: 3,
+    item_id: 'item3',
+    title: 'The Selfish Gene',
+    author: 'Richard Dawkins',
+    category: 'Nonfiction',
   },
 ];
 

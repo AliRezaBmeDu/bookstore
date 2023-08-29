@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/booksSlice';
 
-const Form = ({ onAddBook }) => {
+const Form = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
+  const dispatch = useDispatch();
 
   const handleAddClick = () => {
     if (title && author && category) {
       // Calculate the id for the new book
-      const newId = new Date().getTime();
+      const curDate = new Date().getTime();
+      const newId = curDate.toString();
 
       // Create the new book object
       const newBook = {
-        id: newId,
+        item_id: newId,
         title,
         author,
         category,
       };
 
-      // Call the parent component's onAddBook function to add the new book
-      onAddBook(newBook);
+      // Dispatch the AddBook function to add the new book
+      dispatch(addBook(newBook));
 
       // Clear the input fields
       setTitle('');
@@ -66,10 +69,6 @@ const Form = ({ onAddBook }) => {
       </button>
     </form>
   );
-};
-
-Form.propTypes = {
-  onAddBook: PropTypes.func.isRequired,
 };
 
 export default Form;

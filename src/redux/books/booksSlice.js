@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
+import primaryBooks from '../../components/BookDB';
 
 const initialState = {
-  books: [],
+  books: primaryBooks,
   isLoading: true,
 };
 
@@ -11,11 +12,11 @@ const booksSlice = createSlice({
   reducers: {
     addBook: (state, action) => {
       const newBook = action.payload;
-      state.books = state.books.append(newBook);
+      state.books = [...state.books, newBook];
     },
     deleteBook: (state, action) => {
-      const bookId = action.payload.id;
-      state.books = state.books.filter((item) => item.id !== bookId);
+      const bookId = action.payload.item_id;
+      state.books = state.books.filter((item) => item.item_id !== bookId);
     },
   },
 });
