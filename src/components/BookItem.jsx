@@ -6,19 +6,18 @@ import { deleteBook } from '../redux/books/booksSlice';
 const BookItem = ({ book }) => {
   const dispatch = useDispatch();
   return (
-    <>
-      <span>
-        <strong>Title:</strong>
-        {book.title}
-        ,
-        <strong>Author:</strong>
-        {book.author}
-        ,
-        <strong>Category:</strong>
-        {book.category}
-      </span>
-      <button type="button" onClick={() => dispatch(deleteBook(book))}>Delete</button>
-    </>
+    <div className="single-book">
+      <div className="book-info">
+        <span className="book-category">{book.category}</span>
+        <span className="book-title">{book.title}</span>
+        <span className="book-author">{book.author}</span>
+      </div>
+      <div className="btn-container">
+        <button type="button">Comments</button>
+        <button type="button" onClick={() => dispatch(deleteBook(book))}>Remove</button>
+        <button type="button">Edit</button>
+      </div>
+    </div>
   );
 };
 

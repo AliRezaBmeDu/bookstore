@@ -4,14 +4,16 @@ import { Link } from 'react-router-dom';
 function Navigation() {
   return (
     <header>
-      <h1>Bookstore</h1>
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <h1 className="bookstore-cms">Bookstore CMS</h1>
           </li>
           <li>
-            <Link to="/categories">Categories</Link>
+            <Link to="/" className="books-nav">BOOKS</Link>
+          </li>
+          <li>
+            <Link to="/categories" className="categories-nav">CATEGORIES</Link>
           </li>
         </ul>
       </nav>
