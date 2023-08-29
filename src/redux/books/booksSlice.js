@@ -9,7 +9,7 @@ const initialState = {
   isLoading: true,
 };
 
-export const getBooks = createAsyncThunk('books/getBookItems', async () => {
+export const getBookItems = createAsyncThunk('books/getBookItems', async () => {
   try{
     const response = await axios(`${baseUrl}/apps/${appId}/books`);
     console.log(response.data)
@@ -31,6 +31,18 @@ const booksSlice = createSlice({
       state.books = state.books.filter((item) => item.item_id !== bookId);
     },
   },
+  extraReducers: {
+    [getBookItems.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [getBookItems.fulfilled]: (state, action) => {
+      console.log('Data fetching complete');
+      state.isLoading = false;
+    },
+    [getBookItems.rejected]: (state) => {
+      state.isLoading = false;
+    }
+  }
 });
 
 export const { addBook, deleteBook } = booksSlice.actions;
