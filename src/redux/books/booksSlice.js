@@ -30,6 +30,16 @@ export const getBookItems = createAsyncThunk('books/getBookItems', async () => {
   }
 });
 
+const postBookItem = async (newBook) => {
+  try {
+    const response = await axios.post(`${baseUrl}/apps/${appId}/books`, newBook);
+    console.log('Book added successfully:', response.data);
+  } catch (error) {
+    console.error('Error adding book:', error);
+    throw error;
+  }
+};
+
 const booksSlice = createSlice({
   name: 'books',
   initialState,
@@ -37,6 +47,7 @@ const booksSlice = createSlice({
     addBook: (state, action) => {
       const newBook = action.payload;
       state.books = [...state.books, newBook];
+      postBookItem(newBook);
     },
     deleteBook: (state, action) => {
       const bookId = action.payload.item_id;
