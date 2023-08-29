@@ -40,6 +40,16 @@ const postBookItem = async (newBook) => {
   }
 };
 
+const deleteBookItem = async (bookId) => {
+  try {
+    const response = await axios.delete(`${baseUrl}/apps/${appId}/books/${bookId}`);
+    console.log('Book deleted successfully:', response.data);
+  } catch (error) {
+    console.error('Error deleting book:', error);
+    throw error;
+  }
+};
+
 const booksSlice = createSlice({
   name: 'books',
   initialState,
@@ -52,6 +62,7 @@ const booksSlice = createSlice({
     deleteBook: (state, action) => {
       const bookId = action.payload.item_id;
       state.books = state.books.filter((item) => item.item_id !== bookId);
+      deleteBookItem(bookId);
     },
   },
   extraReducers: {
