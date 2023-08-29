@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 
@@ -20,16 +19,5 @@ const Booklist = () => {
     </div>
   );
 };
-
-// Booklist.propTypes = {
-//   books: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       title: PropTypes.string.isRequired,
-//       author: PropTypes.string.isRequired,
-//       category: PropTypes.string.isRequired,
-//     }),
-//   ).isRequired,
-// };
 
 export default Booklist;

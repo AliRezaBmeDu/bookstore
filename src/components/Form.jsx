@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
 
@@ -71,9 +70,5 @@ const Form = () => {
     </form>
   );
 };
-
-// Form.propTypes = {
-//   onAddBook: PropTypes.func.isRequired,
-// };
 
 export default Form;
