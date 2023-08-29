@@ -31,7 +31,7 @@ export const getBookItems = createAsyncThunk('books/getBookItems', async () => {
 
 const postBookItem = async (newBook) => {
   try {
-    const response = await axios.post(`${baseUrl}/apps/${appId}/books`, newBook);
+    await axios.post(`${baseUrl}/apps/${appId}/books`, newBook);
   } catch (error) {
     console.error('Error adding book:', error);
     throw error;
@@ -40,7 +40,7 @@ const postBookItem = async (newBook) => {
 
 const deleteBookItem = async (bookId) => {
   try {
-    const response = await axios.delete(`${baseUrl}/apps/${appId}/books/${bookId}`);
+    await axios.delete(`${baseUrl}/apps/${appId}/books/${bookId}`);
   } catch (error) {
     console.error('Error deleting book:', error);
     throw error;
