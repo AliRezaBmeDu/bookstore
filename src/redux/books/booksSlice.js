@@ -22,7 +22,6 @@ const makeProperList = (booksObject) => {
 export const getBookItems = createAsyncThunk('books/getBookItems', async () => {
   try {
     const response = await axios(`${baseUrl}/apps/${appId}/books`);
-    console.log(response.data);
     return response.data;
   } catch (err) {
     console.error('Error fetching data');
@@ -33,7 +32,6 @@ export const getBookItems = createAsyncThunk('books/getBookItems', async () => {
 const postBookItem = async (newBook) => {
   try {
     const response = await axios.post(`${baseUrl}/apps/${appId}/books`, newBook);
-    console.log('Book added successfully:', response.data);
   } catch (error) {
     console.error('Error adding book:', error);
     throw error;
@@ -43,7 +41,6 @@ const postBookItem = async (newBook) => {
 const deleteBookItem = async (bookId) => {
   try {
     const response = await axios.delete(`${baseUrl}/apps/${appId}/books/${bookId}`);
-    console.log('Book deleted successfully:', response.data);
   } catch (error) {
     console.error('Error deleting book:', error);
     throw error;
@@ -70,7 +67,6 @@ const booksSlice = createSlice({
       state.isLoading = true;
     },
     [getBookItems.fulfilled]: (state, action) => {
-      console.log('Data fetching complete');
       state.books = makeProperList(action.payload);
       state.isLoading = false;
     },
