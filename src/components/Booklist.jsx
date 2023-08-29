@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 
 const Booklist = () => {
-  // const dispatch = useDispatch();
   const { books } = useSelector((store) => store.books);
 
   return (
