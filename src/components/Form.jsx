@@ -34,39 +34,48 @@ const Form = () => {
 
   return (
     <form>
-      <label htmlFor="title">
-        Title:
-        <input
-          type="text"
-          id="title"
-          className="title-input"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-      </label>
-      <label htmlFor="author">
-        Author:
-        <input
-          type="text"
-          id="author"
-          className="author-input"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
-        />
-      </label>
-      <label htmlFor="category">
-        Category:
-        <input
-          type="text"
-          id="category"
-          className="category-input"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-        />
-      </label>
-      <button type="button" onClick={handleAddClick}>
-        Add
-      </button>
+      <hr />
+      <h2 className="add-book-heading">Add New Book</h2>
+      <div className="form-components">
+        <label htmlFor="title">
+          <input
+            type="text"
+            id="title"
+            className="title-input"
+            placeholder="Book Title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        </label>
+        <label htmlFor="author">
+          <input
+            type="text"
+            id="author"
+            className="author-input"
+            placeholder="Book Author"
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
+          />
+        </label>
+        <label htmlFor="category" className="category-input">
+          <select
+            className="category-selected"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option value="" disabled>Category</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Comics">Comics</option>
+            <option value="Classic">Classic</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Thriller">Romantic</option>
+          </select>
+        </label>
+        <button type="button" className="add-btn" onClick={handleAddClick}>
+          ADD BOOK
+        </button>
+      </div>
     </form>
   );
 };
