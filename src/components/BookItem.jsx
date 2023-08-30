@@ -29,6 +29,11 @@ const BookItem = ({ book }) => {
           <p className="completed-text">Completed</p>
         </div>
       </div>
+      <div className="end-section">
+        <span className="current-chapter">Current Chapter</span>
+        <span className="chapter-number">Chapter 1</span>
+        <button type="button" className="update-btn">Update Progress</button>
+      </div>
     </div>
   );
 };
