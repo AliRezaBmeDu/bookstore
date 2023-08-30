@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { HumanLoggedIn } from './Icons';
+import profileImage from '../assets/profile-icon.png';
 
 function Navigation() {
   return (
@@ -13,10 +13,10 @@ function Navigation() {
           <Link to="/" className="books-nav">BOOKS</Link>
         </li>
         <li>
-          <Link to="/categories" className="categories-nav">CATEGORIES</Link>
+          <Link to="/categories" className="books-nav categories-nav">CATEGORIES</Link>
         </li>
       </ul>
-      <HumanLoggedIn />
+      <img src={profileImage} className="human-icon" alt="logged-in" />
     </nav>
   );
 }

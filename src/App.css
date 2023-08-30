@@ -30,9 +30,10 @@ body {
   margin: 3rem auto 5rem auto;
   padding: 0 0 1.625rem 0;
   border-radius: 4px;
-  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 40px 40px 100px rgba(0, 0, 0, 0.1);
   background-color: var(--white);
 }
+
 
 /* -------------Navigation----------- */
 
@@ -47,11 +48,15 @@ nav {
 }
 
 nav ul {
-  width: 50%;
+  width: 80%;
   list-style-type: none;
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+nav ul li:first-child {
+  width: 40%;
 }
 
 .bookstore-cms {
@@ -84,25 +89,13 @@ nav ul {
 }
 
 .categories-nav {
-  width: 8.5%;
-  height: 1rem;
-  margin: 1.125rem 2.563rem 0.688rem 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.813rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.9px;
-  color: var(--black-two);
-  text-decoration: none;
+  opacity: 0.5;
 }
 
 .human-icon {
   height: 3rem;
   width: 3rem;
   position: relative;
-  left: -2rem;
   top: 1rem;
 }
 
