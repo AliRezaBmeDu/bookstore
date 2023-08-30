@@ -101,8 +101,8 @@ nav ul {
   display: flex;
   margin: auto;
   width: 72%;
-  height: 8rem;
-  padding: 1.2rem 12.5% 1rem 2.24%;
+  height: 7.5rem;
+  padding: 1.2rem 10.5% .9rem 2.24%;
   border-radius: 4px;
   border: solid 1px var(--white-three);
   background-color: var(--white-two);
@@ -201,6 +201,7 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: -1rem;
 }
 
 .circle {
@@ -224,7 +225,7 @@ nav ul {
 .percentage-text {
   width: 4.25rem;
   height: 2.438rem;
-  margin: 0.53rem 5.75rem 0 0;
+  margin: 0.73rem 5.75rem 0 0;
   font-family: "Montserrat" sans-serif;
   font-size: 1.5rem;
   font-weight: normal;
@@ -239,7 +240,7 @@ nav ul {
 .completed-text {
   width: 5rem;
   height: 1.125rem;
-  margin: 0.438rem 4.938rem 0.75rem 0;
+  margin: 0.538rem 4.938rem 0.75rem 0;
   opacity: 0.5;
   font-family: "Montserrat" sans-serif;
   font-size: 0.875rem;
@@ -286,9 +287,9 @@ nav ul {
 }
 
 .update-btn {
-  width: 11.5rem;
+  width: 9.5rem;
   height: 2.063rem;
-  margin: 0.75rem 0 0.563rem 3.688rem;
+  margin: 0.95rem 0 0.163rem 3.688rem;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   border-radius: 3px;
   background-color: var(--azure);
@@ -302,6 +303,8 @@ nav ul {
   letter-spacing: 0.5px;
   text-align: center;
   color: var(--white-two);
+  position: relative;
+  top: 0.3rem;
 }
 
 /*----------------End of Book Container--------------*/

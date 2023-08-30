@@ -31,7 +31,7 @@ export const ChevronDown = () => (
 );
 
 export const CircularProgressBar = ({ percentage }) => {
-  const radius = 40;
+  const radius = 32;
   const circumference = 2 * Math.PI * radius;
   const progress = circumference - (percentage / 100) * circumference;
 

@@ -5,6 +5,7 @@ import { deleteBook } from '../redux/books/booksSlice';
 import { CircularProgressBar } from './Icons';
 
 const BookItem = ({ book }) => {
+  const randomPercentage = Math.floor(Math.random() * 101);
   const dispatch = useDispatch();
   return (
     <div className="single-book-container">
@@ -23,9 +24,12 @@ const BookItem = ({ book }) => {
         </div>
       </div>
       <div className="mid-section">
-        <CircularProgressBar percentage={75} />
+        <CircularProgressBar percentage={randomPercentage} />
         <div>
-          <span className="percentage-text">75%</span>
+          <span className="percentage-text">
+            {randomPercentage}
+            %
+          </span>
           <p className="completed-text">Completed</p>
         </div>
       </div>
