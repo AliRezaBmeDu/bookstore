@@ -9,7 +9,7 @@
   --white-three: #e8e8e8;
   --author-color: #4386bf;
   --button-color: #4386bf;
-  --very-light-pink: #c4c4c4;
+  --very-light-pink: #b4a7a7;
 }
 
 html,
@@ -92,7 +92,7 @@ nav ul {
   height: 3rem;
   width: 3rem;
   position: relative;
-  left:-2rem;
+  left: -2rem;
   top: 1rem;
 }
 
