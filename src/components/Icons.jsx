@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
 export const CartIcon = () => (
@@ -18,12 +19,31 @@ export const CartIcon = () => (
 );
 
 export const HumanLoggedIn = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-    <circle cx="50" cy="50" r="45" fill="white" />
-
-    <circle cx="50" cy="30" r="15" fill="blue" />
-    <rect x="45" y="45" width="10" height="30" fill="blue" />
-    <circle cx="50" cy="70" r="10" fill="blue" />
+  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" className="human-icon" version="1.1" width="256" height="256" viewBox="0 0 256 256" xmlSpace="preserve">
+    <defs />
+    <g
+      style={{
+        stroke: 'none', strokeWidth: 0, strokeDasharray: 'none', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 10, fill: 'none', fillRule: 'nonzero', opacity: 1,
+      }}
+      transform="translate(45.02412451361867 45.024124513618645) scale(1.83 1.83)"
+    >
+      <path
+        d="M 45 53.718 c -10.022 0 -18.175 -8.153 -18.175 -18.175 S 34.978 17.368 45 17.368 c 10.021 0 18.175 8.153 18.175 18.175 S 55.021 53.718 45 53.718 z"
+        style={{
+          stroke: 'none', strokeWidth: 1, strokeDasharray: 'none', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 10, fill: 'rgb(96,96,233)', fillRule: 'nonzero', opacity: 1,
+        }}
+        transform="matrix(1 0 0 1 0 0)"
+        strokeLinecap="round"
+      />
+      <path
+        d="M 45 0 C 20.187 0 0 20.187 0 45 c 0 24.813 20.187 45 45 45 c 24.813 0 45 -20.187 45 -45 C 90 20.187 69.813 0 45 0 z M 74.821 70.096 c -3.543 -5.253 -8.457 -9.568 -14.159 -12.333 c -2.261 -1.096 -4.901 -1.08 -7.247 0.047 c -2.638 1.268 -5.47 1.91 -8.415 1.91 c -2.945 0 -5.776 -0.643 -8.415 -1.91 c -2.343 -1.125 -4.984 -1.143 -7.247 -0.047 c -5.702 2.765 -10.616 7.08 -14.16 12.333 C 9.457 63.308 6 54.552 6 45 C 6 23.495 23.495 6 45 6 s 39 17.495 39 39 C 84 54.552 80.543 63.308 74.821 70.096 z"
+        style={{
+          stroke: 'none', strokeWidth: 1, strokeDasharray: 'none', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 10, fill: 'rgb(96,96,233)', fillRule: 'nonzero', opacity: 1,
+        }}
+        transform="matrix(1 0 0 1 0 0)"
+        strokeLinecap="round"
+      />
+    </g>
   </svg>
 );
 
