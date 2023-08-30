@@ -25,8 +25,8 @@ const BookItem = ({ book }) => {
       <div className="mid-section">
         <CircularProgressBar percentage={75} />
         <div>
-          <span>75%</span>
-          <p>Completed</p>
+          <span className="percentage-text">75%</span>
+          <p className="completed-text">Completed</p>
         </div>
       </div>
     </div>

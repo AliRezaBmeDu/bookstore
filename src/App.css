@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;600;700&display=swap');
 
 :root {
   --body-color: #f5f6fa;
@@ -46,7 +46,7 @@ nav ul {
 .bookstore-cms {
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
-  font-family: Montserrat;
+  font-family: "Montserrat" sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -60,7 +60,7 @@ nav ul {
   width: 8.5%;
   height: 1rem;
   margin: 1.125rem 2.563rem 0.688rem 0;
-  font-family: Montserrat;
+  font-family: "Montserrat" sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
@@ -75,7 +75,7 @@ nav ul {
   width: 8.5%;
   height: 1rem;
   margin: 1.125rem 2.563rem 0.688rem 0;
-  font-family: Montserrat;
+  font-family: "Montserrat" sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
@@ -123,7 +123,7 @@ nav ul {
   height: 1.125rem;
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: "Montserrat" sans-serif;
   font-size: 0.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -191,7 +191,7 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  margin-left: -0.7rem;
 }
 
 .circular-progress-bar {
@@ -220,6 +220,35 @@ nav ul {
   transition: stroke-dashoffset 0.3s ease;
 }
 
+.percentage-text {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.53rem 5.75rem 0 0;
+  font-family: "Montserrat" sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+  align-self: center;
+}
+
+.completed-text {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0;
+  opacity: 0.5;
+  font-family: "Montserrat" sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
 
 
 
