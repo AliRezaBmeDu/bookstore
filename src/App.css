@@ -10,6 +10,7 @@
   --author-color: #4386bf;
   --button-color: #4386bf;
   --very-light-pink: #b4a7a7;
+  --white: #fafafa;
 }
 
 html,
@@ -22,6 +23,15 @@ body {
 
 #root {
   height: 100%;
+}
+
+.app {
+  width: 85%;
+  margin: 3rem auto 5rem auto;
+  padding: 0 0 1.625rem 0;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
 }
 
 /* -------------Navigation----------- */
@@ -299,7 +309,7 @@ nav ul {
   width: 9.5rem;
   height: 2.063rem;
   margin: 0.95rem 0 0.163rem 3.688rem;
-  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  padding: 0.338rem 1.188rem 0.6rem 1.375rem;
   border-radius: 3px;
   background-color: var(--azure);
   border-color: transparent;

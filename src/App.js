@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Homepage from './pages/Homepage';
 import Categories from './pages/Categories';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import { getBookItems } from './redux/books/booksSlice';
 import './App.css';
 
@@ -25,14 +26,14 @@ const App = () => {
 
   return (
     <Router>
-      <div className="App">
+      <div className="app">
         <Navigation />
-
         <Routes>
           <Route path="/" exact element={<Homepage />} />
           <Route path="/categories" element={<Categories />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 };
