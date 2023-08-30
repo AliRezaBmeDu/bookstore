@@ -1,21 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import profileImage from '../assets/profile-icon.png';
 
 function Navigation() {
   return (
-    <header>
-      <h1>Bookstore</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/categories">Categories</Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <nav>
+      <ul>
+        <li>
+          <h1 className="bookstore-cms">Bookstore CMS</h1>
+        </li>
+        <li>
+          <Link to="/" className="books-nav">BOOKS</Link>
+        </li>
+        <li>
+          <Link to="/categories" className="books-nav categories-nav">CATEGORIES</Link>
+        </li>
+      </ul>
+      <img src={profileImage} className="human-icon" alt="logged-in" />
+    </nav>
   );
 }
 

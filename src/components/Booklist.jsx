@@ -7,8 +7,7 @@ const Booklist = () => {
 
   return (
     <div>
-      <h2>Book List</h2>
-      <ul>
+      <ul className="books-container">
         {books.map((book) => (
           <li key={book.item_id}>
             <BookItem book={book} />
