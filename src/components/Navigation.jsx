@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CartIcon } from './Icons';
+import { HumanLoggedIn } from './Icons';
 
 function Navigation() {
   return (
@@ -16,7 +16,7 @@ function Navigation() {
           <Link to="/categories" className="categories-nav">CATEGORIES</Link>
         </li>
       </ul>
-      <CartIcon />
+      <HumanLoggedIn />
     </nav>
   );
 }
