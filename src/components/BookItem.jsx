@@ -33,6 +33,7 @@ const BookItem = ({ book }) => {
           <p className="completed-text">Completed</p>
         </div>
       </div>
+      <span className="separator" />
       <div className="end-section">
         <span className="current-chapter">Current Chapter</span>
         <span className="chapter-number">Chapter 1</span>
